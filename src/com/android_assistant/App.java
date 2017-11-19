@@ -191,6 +191,13 @@ public class App {
 		NotificationManager manager = (NotificationManager) activity
 				.getSystemService(Context.NOTIFICATION_SERVICE);
 
+		notification.flags |= Notification.FLAG_ONGOING_EVENT;
+		notification.flags |= Notification.FLAG_NO_CLEAR;
+		notification.flags |= Notification.FLAG_SHOW_LIGHTS;
+		notification.defaults = Notification.DEFAULT_LIGHTS;
+		notification.ledARGB = android.graphics.Color.BLUE;
+		notification.ledOnMS = 5000;
+		
 		manager.notify(0, notification);
 
 		activity.moveTaskToBack(!taskIsRoot);
