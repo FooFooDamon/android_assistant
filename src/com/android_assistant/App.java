@@ -28,7 +28,11 @@
 
 package com.android_assistant;
 
+import java.util.List;
+
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningAppProcessInfo;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -178,18 +182,42 @@ public class App {
 				appName + STR_ARRAY_MOVED_TO_BACKGROUND[CUR_LANG],
 				Toast.LENGTH_SHORT).show();
 
+		displayNotification(activity, appName, STR_ARRAY_CLICK_TO_RESTORE[CUR_LANG],
+			appName + STR_ARRAY_RUNNING_IN_BACKGROUND[CUR_LANG], appIcon);
+
+		activity.moveTaskToBack(!taskIsRoot);
+	}
+	
+	public static boolean isInBackground(Context context) {
+		ActivityManager manager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+		List<RunningAppProcessInfo> processes = manager.getRunningAppProcesses();
+		
+		for (RunningAppProcessInfo app : processes) {
+			if (app.processName.equals(context.getPackageName())) {
+				if (app.importance == RunningAppProcessInfo.IMPORTANCE_BACKGROUND)
+					return true;
+				else
+					return false;
+			}
+		}
+		
+		return false;
+	}
+	
+	public static void displayNotification(Activity activity, String title,
+		String content, String tickerText, int appIcon) {
 		Intent intent = new Intent(activity, activity.getClass());
 		PendingIntent pendingIntent = PendingIntent.getActivity(activity, 0,
-				intent, PendingIntent.FLAG_UPDATE_CURRENT);
+			intent, PendingIntent.FLAG_UPDATE_CURRENT);
 		Notification notification = new Notification.Builder(activity)
-				.setContentTitle(appName)
-				.setContentText(STR_ARRAY_CLICK_TO_RESTORE[CUR_LANG])
-				.setSmallIcon(appIcon)
-				.setTicker(appName + STR_ARRAY_RUNNING_IN_BACKGROUND[CUR_LANG])
-				.setAutoCancel(true).setWhen(System.currentTimeMillis())
-				.setContentIntent(pendingIntent).build();
+			.setContentTitle(title)
+			.setContentText(content)
+			.setSmallIcon(appIcon)
+			.setTicker(tickerText)
+			.setAutoCancel(true).setWhen(System.currentTimeMillis())
+			.setContentIntent(pendingIntent).build();
 		NotificationManager manager = (NotificationManager) activity
-				.getSystemService(Context.NOTIFICATION_SERVICE);
+			.getSystemService(Context.NOTIFICATION_SERVICE);
 
 		notification.flags |= Notification.FLAG_ONGOING_EVENT;
 		notification.flags |= Notification.FLAG_NO_CLEAR;
@@ -199,8 +227,16 @@ public class App {
 		notification.ledOnMS = 5000;
 		
 		manager.notify(0, notification);
-
-		activity.moveTaskToBack(!taskIsRoot);
+	}
+	
+	public static void cancelNotification(Activity activity) {
+		if (null == activity)
+			return;
+		
+		NotificationManager notificationManager = (NotificationManager) activity.getSystemService(
+			android.content.Context.NOTIFICATION_SERVICE);
+		
+		notificationManager.cancel(0);
 	}
 
 	private static PackageInfo getPackageInfo(Context ctx) {

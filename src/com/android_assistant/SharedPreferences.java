@@ -72,16 +72,16 @@ public class SharedPreferences {
 		// TODO: add try{}catch(){}
 		if (value.getClass() == boolean.class
 				|| value.getClass() == java.lang.Boolean.class)
-			editor.putBoolean(key, (boolean) value).commit();
+			editor.putBoolean(key, (Boolean) value).commit();
 		else if (value.getClass() == int.class
 				|| value.getClass() == java.lang.Integer.class)
-			editor.putInt(key, (int) value).commit();
+			editor.putInt(key, (java.lang.Integer) value ).commit();
 		else if (value.getClass() == long.class
 				|| value.getClass() == java.lang.Long.class)
-			editor.putLong(key, (long) value).commit();
+			editor.putLong(key, (Long) value).commit();
 		else if (value.getClass() == float.class
 				|| value.getClass() == java.lang.Float.class)
-			editor.putFloat(key, (float) value).commit();
+			editor.putFloat(key, (Float) value).commit();
 		else if (value.getClass() == String.class
 				|| value.getClass() == java.lang.String.class)
 			editor.putString(key, (String) value).commit();
