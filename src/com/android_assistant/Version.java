@@ -29,17 +29,17 @@
 package com.android_assistant;
 
 public class Version {
-	public static final int SDK = android.os.Build.VERSION.SDK_INT;
+    public static final int SDK = android.os.Build.VERSION.SDK_INT;
 
-	private static final int DEFAULT_DEPRECATED_VERSION_UPPER_BOUND = 17;
-	private static int mDeprecatedVersionUpperBound = DEFAULT_DEPRECATED_VERSION_UPPER_BOUND;
+    private static final int DEFAULT_DEPRECATED_VERSION_UPPER_BOUND = 17;
+    private static int mDeprecatedVersionUpperBound = DEFAULT_DEPRECATED_VERSION_UPPER_BOUND;
 
-	public static void setDeprecatedVersionUpperBound(int upperBound) {
-		if (upperBound > 0)
-			mDeprecatedVersionUpperBound = upperBound;
-	}
+    public static void setDeprecatedVersionUpperBound(int upperBound) {
+        if (upperBound > 0)
+            mDeprecatedVersionUpperBound = upperBound;
+    }
 
-	public static int getDeprecatedVersionUpperBound() {
-		return mDeprecatedVersionUpperBound;
-	}
+    public static int getDeprecatedVersionUpperBound() {
+        return mDeprecatedVersionUpperBound;
+    }
 }

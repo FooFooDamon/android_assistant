@@ -29,18 +29,18 @@
 package com.android_assistant;
 
 public class Color {
-	public static final int DEFAULT_ACTION_BAR = blue(140);
-	public static final int DEFAULT_TEXT_SHADOW = android.graphics.Color.BLACK;
+    public static final int DEFAULT_ACTION_BAR = blue(140);
+    public static final int DEFAULT_TEXT_SHADOW = android.graphics.Color.BLACK;
 
-	public static int red(int transparentValue) {
-		return android.graphics.Color.argb(transparentValue, 255, 0, 0);
-	}
+    public static int red(int transparentValue) {
+        return android.graphics.Color.argb(transparentValue, 255, 0, 0);
+    }
 
-	public static int green(int transparentValue) {
-		return android.graphics.Color.argb(transparentValue, 0, 255, 0);
-	}
+    public static int green(int transparentValue) {
+        return android.graphics.Color.argb(transparentValue, 0, 255, 0);
+    }
 
-	public static int blue(int transparentValue) {
-		return android.graphics.Color.argb(transparentValue, 0, 0, 255);
-	}
+    public static int blue(int transparentValue) {
+        return android.graphics.Color.argb(transparentValue, 0, 0, 255);
+    }
 }

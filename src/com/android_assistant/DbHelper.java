@@ -34,60 +34,60 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 public class DbHelper {
-	private Context mContext = null;
-	private String mDbName = null;
-	private String mDbDir = android.os.Environment.getDataDirectory().getAbsolutePath();
-	private SQLiteDatabase mDb = null;
-	
-	public DbHelper(Context context, String dbName) {
-		if (null == context || null == dbName)
-			throw new NullPointerException();
-		
-		mContext = context;
-		mDbName = dbName;
-	}
-	
-	public DbHelper(Context context, String dbName, String dbDirectory) {
-		if (null == context || null == dbName || null == dbDirectory)
-			throw new NullPointerException();
-		
-		mContext = context;
-		mDbName = dbName;
-		
-		File dir = new File(dbDirectory);
-		
-		if (!dir.exists())
-			dir.mkdirs();
-		
-		mDbDir = dbDirectory;
-	}
+    private Context mContext = null;
+    private String mDbName = null;
+    private String mDbDir = android.os.Environment.getDataDirectory().getAbsolutePath();
+    private SQLiteDatabase mDb = null;
 
-	public static SQLiteDatabase openOrCreate(String dbDir, String dbName) {
-		return SQLiteDatabase.openOrCreateDatabase(dbDir + "/" + dbName, null);
-	}
-	
-	public static void close(SQLiteDatabase db) {
-		if (null != db)
-			db.close();
-	}
-	
-	public String getDatabaseName() {
-		return mDbName;
-	}
-	
-	public String getDatabaseDirectory() {
-		return mDbDir;
-	}
+    public DbHelper(Context context, String dbName) {
+        if (null == context || null == dbName)
+            throw new NullPointerException();
 
-	public void openOrCreate() {
-		mDb = openOrCreate(mDbDir, mDbName);
-	}
-	
-	public SQLiteDatabase getDatabase() {
-		return mDb;
-	}
-	
-	public void close() {
-		close(mDb);
-	}
+        mContext = context;
+        mDbName = dbName;
+    }
+
+    public DbHelper(Context context, String dbName, String dbDirectory) {
+        if (null == context || null == dbName || null == dbDirectory)
+            throw new NullPointerException();
+
+        mContext = context;
+        mDbName = dbName;
+
+        File dir = new File(dbDirectory);
+
+        if (!dir.exists())
+            dir.mkdirs();
+
+        mDbDir = dbDirectory;
+    }
+
+    public static SQLiteDatabase openOrCreate(String dbDir, String dbName) {
+        return SQLiteDatabase.openOrCreateDatabase(dbDir + "/" + dbName, null);
+    }
+
+    public static void close(SQLiteDatabase db) {
+        if (null != db)
+            db.close();
+    }
+
+    public String getDatabaseName() {
+        return mDbName;
+    }
+
+    public String getDatabaseDirectory() {
+        return mDbDir;
+    }
+
+    public void openOrCreate() {
+        mDb = openOrCreate(mDbDir, mDbName);
+    }
+
+    public SQLiteDatabase getDatabase() {
+        return mDb;
+    }
+
+    public void close() {
+        close(mDb);
+    }
 }

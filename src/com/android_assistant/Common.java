@@ -30,7 +30,7 @@ package com.android_assistant;
 
 public class Common {
 
-	public final static String PACKAGE_NAME = "android_assistant";
+    public final static String PACKAGE_NAME = "android_assistant";
 
-	public final static String CLASS_NAME = PACKAGE_NAME + "Common";
+    public final static String CLASS_NAME = PACKAGE_NAME + "Common";
 }

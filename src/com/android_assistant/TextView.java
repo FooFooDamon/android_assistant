@@ -29,17 +29,17 @@
 package com.android_assistant;
 
 public class TextView {
-	public static final float DEFAULT_SHADOW_RADIUS = 5F;
-	public static final float DEFAULT_SHADOW_DX = 5F;
-	public static final float DEFAULT_SHADOW_DY = 5F;
+    public static final float DEFAULT_SHADOW_RADIUS = 5F;
+    public static final float DEFAULT_SHADOW_DX = 5F;
+    public static final float DEFAULT_SHADOW_DY = 5F;
 
-	public static void setDefaultTextShadow(android.widget.TextView view) {
-		final float RADIUS = DEFAULT_SHADOW_RADIUS;
-		final float DX = DEFAULT_SHADOW_DX;
-		final float DY = DEFAULT_SHADOW_DY;
-		final int COLOR = Color.DEFAULT_TEXT_SHADOW;
+    public static void setDefaultTextShadow(android.widget.TextView view) {
+        final float RADIUS = DEFAULT_SHADOW_RADIUS;
+        final float DX = DEFAULT_SHADOW_DX;
+        final float DY = DEFAULT_SHADOW_DY;
+        final int COLOR = Color.DEFAULT_TEXT_SHADOW;
 
-		view.setShadowLayer(RADIUS, DX, DY, COLOR);
-	}
+        view.setShadowLayer(RADIUS, DX, DY, COLOR);
+    }
 
 }

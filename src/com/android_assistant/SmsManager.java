@@ -31,37 +31,37 @@ package com.android_assistant;
 import android.util.Log;
 
 public class SmsManager {
-	public final static String CLASS_NAME = Common.PACKAGE_NAME + "SmsManager";
+    public final static String CLASS_NAME = Common.PACKAGE_NAME + "SmsManager";
 
-	private static int MAX_SINGLE_SMS_LENGTH_FOR_ENGLISH = 160;
-	private static int MAX_SINGLE_SMS_LENGTH_FOR_CHINESE = 70;
+    private static int MAX_SINGLE_SMS_LENGTH_FOR_ENGLISH = 160;
+    private static int MAX_SINGLE_SMS_LENGTH_FOR_CHINESE = 70;
 
-	public static int sendSmsMessage(String recipientPhone, String contents,
-			boolean containsChinese) {
-		final int MAX_SINGLE_SMS_LENGTH = containsChinese ? MAX_SINGLE_SMS_LENGTH_FOR_CHINESE
-				: MAX_SINGLE_SMS_LENGTH_FOR_ENGLISH;
-		int contentLength = contents.length();
+    public static int sendSmsMessage(String recipientPhone, String contents,
+            boolean containsChinese) {
+        final int MAX_SINGLE_SMS_LENGTH = containsChinese ? MAX_SINGLE_SMS_LENGTH_FOR_CHINESE
+                : MAX_SINGLE_SMS_LENGTH_FOR_ENGLISH;
+        int contentLength = contents.length();
 
-		if (contentLength > MAX_SINGLE_SMS_LENGTH) {
-			Log.e(CLASS_NAME, "SMS message too long: " + contents.length()
-					+ ", will be truncated!");
-			// return ReturnValue.FAILED;
-		}
+        if (contentLength > MAX_SINGLE_SMS_LENGTH) {
+            Log.e(CLASS_NAME, "SMS message too long: " + contents.length()
+                    + ", will be truncated!");
+            // return ReturnValue.FAILED;
+        }
 
-		android.telephony.SmsManager smsManager = android.telephony.SmsManager
-				.getDefault();
-		String actualContent = (contentLength > MAX_SINGLE_SMS_LENGTH) ? contents
-				.substring(0, MAX_SINGLE_SMS_LENGTH - 1) : contents;
+        android.telephony.SmsManager smsManager = android.telephony.SmsManager
+                .getDefault();
+        String actualContent = (contentLength > MAX_SINGLE_SMS_LENGTH) ? contents
+                .substring(0, MAX_SINGLE_SMS_LENGTH - 1) : contents;
 
-		try {
-			smsManager.sendTextMessage(recipientPhone, null, actualContent,
-					null, null);
-			Log.w(CLASS_NAME, "Sent " + actualContent.length()
-					+ " bytes/characters of short message: " + actualContent);
-		} catch (IllegalArgumentException e) {
-			Log.w(CLASS_NAME, e.getMessage());
-		}
+        try {
+            smsManager.sendTextMessage(recipientPhone, null, actualContent,
+                    null, null);
+            Log.w(CLASS_NAME, "Sent " + actualContent.length()
+                    + " bytes/characters of short message: " + actualContent);
+        } catch (IllegalArgumentException e) {
+            Log.w(CLASS_NAME, e.getMessage());
+        }
 
-		return ReturnCodes.OK;
-	}
+        return ReturnCodes.OK;
+    }
 }

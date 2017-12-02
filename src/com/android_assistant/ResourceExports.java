@@ -31,128 +31,128 @@ package com.android_assistant;
 import android.content.Context;
 
 public final class ResourceExports {
-	/*
-	 * private static final Activity mAuxiliaryActivity = new Activity();
-	 * 
-	 * private static final Resources mResources = mAuxiliaryActivity
-	 * .getResources();
-	 */
+    /*
+     * private static final Activity mAuxiliaryActivity = new Activity();
+     *
+     * private static final Resources mResources = mAuxiliaryActivity
+     * .getResources();
+     */
 
-	private static Context mContext = null;
+    private static Context mContext = null;
 
-	public static void prepare(Context ctx) {
-		if (null != ctx)
-			mContext = ctx;
-	}
+    public static void prepare(Context ctx) {
+        if (null != ctx)
+            mContext = ctx;
+    }
 
-	public static String[] getStringArray(int resId) {
-		return mContext.getResources().getStringArray(resId);
-	}
+    public static String[] getStringArray(int resId) {
+        return mContext.getResources().getStringArray(resId);
+    }
 
-	public static String[] getStringArray(Context ctx, int resId) {
-		return ctx.getResources().getStringArray(resId);
-	}
+    public static String[] getStringArray(Context ctx, int resId) {
+        return ctx.getResources().getStringArray(resId);
+    }
 
-	public static String getString(int stringArrayId) {
-		return getString(stringArrayId, Language.getCurrent());
-	}
+    public static String getString(int stringArrayId) {
+        return getString(stringArrayId, Language.getCurrent());
+    }
 
-	public static String getString(Context ctx, int stringArrayId) {
-		return getString(ctx, stringArrayId, Language.getCurrent());
-	}
+    public static String getString(Context ctx, int stringArrayId) {
+        return getString(ctx, stringArrayId, Language.getCurrent());
+    }
 
-	public static String getString(int stringArrayId, int language) {
-		return getString(mContext, stringArrayId, language);
-	}
+    public static String getString(int stringArrayId, int language) {
+        return getString(mContext, stringArrayId, language);
+    }
 
-	public static String getString(Context ctx, int stringArrayId, int language) {
-		int backupCurrentLanguage = Language.getCurrent();
-		String result = null;
-		
-		Language.setCurrent(language);
-		result = ctx.getResources().getStringArray(stringArrayId)[Language.getCurrent()];
-		Language.setCurrent(backupCurrentLanguage);
-		
-		return result;
-	}
+    public static String getString(Context ctx, int stringArrayId, int language) {
+        int backupCurrentLanguage = Language.getCurrent();
+        String result = null;
 
-	public static final class array {
-		
-		public static final class string {
-			
-			public final static String[] CONFIRM = {
-				"确定",
-				"確定",
-				"Confirm"
-			};
-	
-			public final static String[] CANCEL = {
-				"取消",
-				"取消",
-				"Cancel"
-			};
-			
-			public final static String[] HELP = {
-				"帮助",
-				"幫助",
-				"Help"
-			};
-	
-			public final static String[] COMMA = {
-				"，",
-				"，",
-				","
-			};
-			
-			public final static String[] FULL_STOP = {
-				"。",
-				"。",
-				"."
-			};
-		
-		} // .array.string
-		
-		// It seems that resources can not exported this way ...
-		/*// public static String[] help =
-		// mResources.getStringArray(R.array.help);
+        Language.setCurrent(language);
+        result = ctx.getResources().getStringArray(stringArrayId)[Language.getCurrent()];
+        Language.setCurrent(backupCurrentLanguage);
 
-		public static String help() {
-			return mContext.getString(R.array.help);
-		}
+        return result;
+    }
 
-		public static String help(Context ctx) {
-			return getString(ctx, R.array.help);
-		}
+    public static final class array {
 
-		// public static String[] confirm =
-		// mResources.getStringArray(R.array.confirm);
+        public static final class string {
 
-		public static String confirm() {
-			return mContext.getString(R.array.confirm);
-		}
+            public final static String[] CONFIRM = {
+                "确定",
+                "確定",
+                "Confirm"
+            };
 
-		public static String confirm(Context ctx) {
-			return getString(ctx, R.array.confirm);
-		}*/
-	} // .array
+            public final static String[] CANCEL = {
+                "取消",
+                "取消",
+                "Cancel"
+            };
 
-	public static final class drawable {
-		;
-	} // .drawable
+            public final static String[] HELP = {
+                "帮助",
+                "幫助",
+                "Help"
+            };
 
-	public static final class id {
-		;
-	} // .id
+            public final static String[] COMMA = {
+                "，",
+                "，",
+                ","
+            };
 
-	public static final class layout {
-		;
-	} // .layout
+            public final static String[] FULL_STOP = {
+                "。",
+                "。",
+                "."
+            };
 
-	public static final class string {
-		;
-	} // .string
+        } // .array.string
 
-	public static final class style {
-		;
-	} // .style
+        // It seems that resources can not exported this way ...
+        /*// public static String[] help =
+        // mResources.getStringArray(R.array.help);
+
+        public static String help() {
+            return mContext.getString(R.array.help);
+        }
+
+        public static String help(Context ctx) {
+            return getString(ctx, R.array.help);
+        }
+
+        // public static String[] confirm =
+        // mResources.getStringArray(R.array.confirm);
+
+        public static String confirm() {
+            return mContext.getString(R.array.confirm);
+        }
+
+        public static String confirm(Context ctx) {
+            return getString(ctx, R.array.confirm);
+        }*/
+    } // .array
+
+    public static final class drawable {
+        ;
+    } // .drawable
+
+    public static final class id {
+        ;
+    } // .id
+
+    public static final class layout {
+        ;
+    } // .layout
+
+    public static final class string {
+        ;
+    } // .string
+
+    public static final class style {
+        ;
+    } // .style
 }

@@ -34,66 +34,66 @@ import android.content.DialogInterface.OnClickListener;
 import android.widget.Toast;
 
 public class Hint {
-	public static void alert(Context context, CharSequence title, CharSequence contents) {
-		new AlertDialog.Builder(context)
-			.setTitle(title)
-			.setMessage(contents)
-			.setPositiveButton(
-				ResourceExports.array.string.CONFIRM[Language.getCurrent()],null)
-			.show();
-	}
-	
-	public static void alert(Context context, int titleResId, int contentsResId) {
-		alert(context, context.getResources().getString(titleResId),
-			context.getResources().getString(contentsResId));
-	}
-	
-	public static void alert(Context context, CharSequence title, CharSequence contents,
-		OnClickListener positiveListener) {
-		new AlertDialog.Builder(context)
-			.setTitle(title)
-			.setMessage(contents)
-			.setPositiveButton(
-				ResourceExports.array.string.CONFIRM[Language.getCurrent()], positiveListener)
-			.show();
-	}
-	
-	public static void alert(Context context, int titleResId, int contentsResId,
-		OnClickListener positiveListener) {
-		alert(context, context.getResources().getString(titleResId),
-			context.getResources().getString(contentsResId), positiveListener);
-	}
-	
-	public static void alert(Context context, CharSequence title, CharSequence contents,
-		OnClickListener positiveListener, OnClickListener negativeListener) {
-		new AlertDialog.Builder(context)
-			.setTitle(title)
-			.setMessage(contents)
-			.setPositiveButton(
-				ResourceExports.array.string.CONFIRM[Language.getCurrent()], positiveListener)
-			.setNegativeButton(ResourceExports.array.string.CANCEL[Language.getCurrent()], negativeListener)
-			.show();
-	}
-	
-	public static void alert(Context context, int titleResId, int contentsResId,
-		OnClickListener positiveListener, OnClickListener negativeListener) {
-		alert(context, context.getResources().getString(titleResId),
-			context.getResources().getString(contentsResId), positiveListener, negativeListener);
-	}
-	
-	public static void shortToast(Context context, CharSequence text) {
-		Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
-	}
-	
-	public static void shortToast(Context context, int resId) {
-		Toast.makeText(context, resId, Toast.LENGTH_SHORT).show();
-	}
-	
-	public static void longToast(Context context, CharSequence text) {
-		Toast.makeText(context, text, Toast.LENGTH_LONG).show();
-	}
-	
-	public static void longToast(Context context, int resId) {
-		Toast.makeText(context, resId, Toast.LENGTH_LONG).show();
-	}
+    public static void alert(Context context, CharSequence title, CharSequence contents) {
+        new AlertDialog.Builder(context)
+            .setTitle(title)
+            .setMessage(contents)
+            .setPositiveButton(
+                ResourceExports.array.string.CONFIRM[Language.getCurrent()],null)
+            .show();
+    }
+
+    public static void alert(Context context, int titleResId, int contentsResId) {
+        alert(context, context.getResources().getString(titleResId),
+            context.getResources().getString(contentsResId));
+    }
+
+    public static void alert(Context context, CharSequence title, CharSequence contents,
+        OnClickListener positiveListener) {
+        new AlertDialog.Builder(context)
+            .setTitle(title)
+            .setMessage(contents)
+            .setPositiveButton(
+                ResourceExports.array.string.CONFIRM[Language.getCurrent()], positiveListener)
+            .show();
+    }
+
+    public static void alert(Context context, int titleResId, int contentsResId,
+        OnClickListener positiveListener) {
+        alert(context, context.getResources().getString(titleResId),
+            context.getResources().getString(contentsResId), positiveListener);
+    }
+
+    public static void alert(Context context, CharSequence title, CharSequence contents,
+        OnClickListener positiveListener, OnClickListener negativeListener) {
+        new AlertDialog.Builder(context)
+            .setTitle(title)
+            .setMessage(contents)
+            .setPositiveButton(
+                ResourceExports.array.string.CONFIRM[Language.getCurrent()], positiveListener)
+            .setNegativeButton(ResourceExports.array.string.CANCEL[Language.getCurrent()], negativeListener)
+            .show();
+    }
+
+    public static void alert(Context context, int titleResId, int contentsResId,
+        OnClickListener positiveListener, OnClickListener negativeListener) {
+        alert(context, context.getResources().getString(titleResId),
+            context.getResources().getString(contentsResId), positiveListener, negativeListener);
+    }
+
+    public static void shortToast(Context context, CharSequence text) {
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+    }
+
+    public static void shortToast(Context context, int resId) {
+        Toast.makeText(context, resId, Toast.LENGTH_SHORT).show();
+    }
+
+    public static void longToast(Context context, CharSequence text) {
+        Toast.makeText(context, text, Toast.LENGTH_LONG).show();
+    }
+
+    public static void longToast(Context context, int resId) {
+        Toast.makeText(context, resId, Toast.LENGTH_LONG).show();
+    }
 }

@@ -29,45 +29,45 @@
 package com.android_assistant;
 
 public class Language {
-	private enum LangKindEnum {
-		/*
-		 * NOTE: The trailing slashes are meaningless, just for preventing the
-		 * IDE formatting source code automatically but ugly sometimes.
-		 */
+    private enum LangKindEnum {
+        /*
+         * NOTE: The trailing slashes are meaningless, just for preventing the
+         * IDE formatting source code automatically but ugly sometimes.
+         */
 
-		CHINESE_SIMPLIFIED, //
-		CHINESE_TRADITIONAL, //
-		ENGLISH, //
+        CHINESE_SIMPLIFIED, //
+        CHINESE_TRADITIONAL, //
+        ENGLISH, //
 
-		// New kinds must be added before this MAX_KIND !!!
-		MAX_KINDS
-	};
+        // New kinds must be added before this MAX_KIND !!!
+        MAX_KINDS
+    };
 
-	public static final int CHINESE_SIMPLIFIED = LangKindEnum.CHINESE_SIMPLIFIED
-			.ordinal();
-	public static final int CHINESE_TRADITIONAL = LangKindEnum.CHINESE_TRADITIONAL
-			.ordinal();
-	public static final int ENGLISH = LangKindEnum.ENGLISH.ordinal();
+    public static final int CHINESE_SIMPLIFIED = LangKindEnum.CHINESE_SIMPLIFIED
+            .ordinal();
+    public static final int CHINESE_TRADITIONAL = LangKindEnum.CHINESE_TRADITIONAL
+            .ordinal();
+    public static final int ENGLISH = LangKindEnum.ENGLISH.ordinal();
 
-	private static int mDefaultLanguage = CHINESE_SIMPLIFIED;
+    private static int mDefaultLanguage = CHINESE_SIMPLIFIED;
 
-	private static int mCurrentLanguage = mDefaultLanguage;
+    private static int mCurrentLanguage = mDefaultLanguage;
 
-	public static int getDefault() {
-		return mDefaultLanguage;
-	}
+    public static int getDefault() {
+        return mDefaultLanguage;
+    }
 
-	public static void setDefault(int language) {
-		if (language >= 0 && language < LangKindEnum.MAX_KINDS.ordinal())
-			mDefaultLanguage = language;
-	}
+    public static void setDefault(int language) {
+        if (language >= 0 && language < LangKindEnum.MAX_KINDS.ordinal())
+            mDefaultLanguage = language;
+    }
 
-	public static int getCurrent() {
-		return mCurrentLanguage;
-	}
+    public static int getCurrent() {
+        return mCurrentLanguage;
+    }
 
-	public static void setCurrent(int language) {
-		if (language >= 0 && language < LangKindEnum.MAX_KINDS.ordinal())
-			mCurrentLanguage = language;
-	}
+    public static void setCurrent(int language) {
+        if (language >= 0 && language < LangKindEnum.MAX_KINDS.ordinal())
+            mCurrentLanguage = language;
+    }
 }

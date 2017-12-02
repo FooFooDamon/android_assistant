@@ -32,70 +32,70 @@ import android.content.Context;
 import android.preference.PreferenceManager;
 
 public class SharedPreferences {
-	private enum ValueTypeEnum {
-		BOOL, INT, LONG, FLOAT, STRING, STRING_SET
-	};
+    private enum ValueTypeEnum {
+        BOOL, INT, LONG, FLOAT, STRING, STRING_SET
+    };
 
-	public static Object getValue(Context context, String key,
-			ValueTypeEnum valueType) {
+    public static Object getValue(Context context, String key,
+            ValueTypeEnum valueType) {
 
-		android.content.SharedPreferences pref = PreferenceManager
-				.getDefaultSharedPreferences(context);
+        android.content.SharedPreferences pref = PreferenceManager
+                .getDefaultSharedPreferences(context);
 
-		// TODO: Is try{}catch(){} necessary??
-		if (ValueTypeEnum.BOOL == valueType)
-			return pref.getBoolean(key, false);
-		else if (ValueTypeEnum.INT == valueType)
-			return pref.getInt(key, 0);
-		else if (ValueTypeEnum.LONG == valueType)
-			return pref.getLong(key, 0);
-		else if (ValueTypeEnum.FLOAT == valueType)
-			return pref.getFloat(key, 0F);
-		else if (ValueTypeEnum.STRING == valueType)
-			return pref.getString(key, null);
-		// TODO: finish it later
-		/*
-		 * else if (ValueTypeEnum.STRING_SET == valueType)
-		 * pref.getStringSet(key, null);
-		 */
-		else
-			return null;
-	}
+        // TODO: Is try{}catch(){} necessary??
+        if (ValueTypeEnum.BOOL == valueType)
+            return pref.getBoolean(key, false);
+        else if (ValueTypeEnum.INT == valueType)
+            return pref.getInt(key, 0);
+        else if (ValueTypeEnum.LONG == valueType)
+            return pref.getLong(key, 0);
+        else if (ValueTypeEnum.FLOAT == valueType)
+            return pref.getFloat(key, 0F);
+        else if (ValueTypeEnum.STRING == valueType)
+            return pref.getString(key, null);
+        // TODO: finish it later
+        /*
+         * else if (ValueTypeEnum.STRING_SET == valueType)
+         * pref.getStringSet(key, null);
+         */
+        else
+            return null;
+    }
 
-	public static int setValue(Context context, String key, Object value) {
+    public static int setValue(Context context, String key, Object value) {
 
-		android.content.SharedPreferences.Editor editor = PreferenceManager
-				.getDefaultSharedPreferences(context).edit();
-		// Set<String> varToGetClassType = new HashSet();
-		boolean isValidType = true;
+        android.content.SharedPreferences.Editor editor = PreferenceManager
+                .getDefaultSharedPreferences(context).edit();
+        // Set<String> varToGetClassType = new HashSet();
+        boolean isValidType = true;
 
-		// TODO: add try{}catch(){}
-		if (value.getClass() == boolean.class
-				|| value.getClass() == java.lang.Boolean.class)
-			editor.putBoolean(key, (Boolean) value).commit();
-		else if (value.getClass() == int.class
-				|| value.getClass() == java.lang.Integer.class)
-			editor.putInt(key, (java.lang.Integer) value ).commit();
-		else if (value.getClass() == long.class
-				|| value.getClass() == java.lang.Long.class)
-			editor.putLong(key, (Long) value).commit();
-		else if (value.getClass() == float.class
-				|| value.getClass() == java.lang.Float.class)
-			editor.putFloat(key, (Float) value).commit();
-		else if (value.getClass() == String.class
-				|| value.getClass() == java.lang.String.class)
-			editor.putString(key, (String) value).commit();
-		// TODO: finish it later
-		/*
-		 * else if (value.getClass() == varToGetClassType.getClass())
-		 * editor.putStringSet(null, null);
-		 */
-		else
-			isValidType = false;
+        // TODO: add try{}catch(){}
+        if (value.getClass() == boolean.class
+                || value.getClass() == java.lang.Boolean.class)
+            editor.putBoolean(key, (Boolean) value).commit();
+        else if (value.getClass() == int.class
+                || value.getClass() == java.lang.Integer.class)
+            editor.putInt(key, (java.lang.Integer) value ).commit();
+        else if (value.getClass() == long.class
+                || value.getClass() == java.lang.Long.class)
+            editor.putLong(key, (Long) value).commit();
+        else if (value.getClass() == float.class
+                || value.getClass() == java.lang.Float.class)
+            editor.putFloat(key, (Float) value).commit();
+        else if (value.getClass() == String.class
+                || value.getClass() == java.lang.String.class)
+            editor.putString(key, (String) value).commit();
+        // TODO: finish it later
+        /*
+         * else if (value.getClass() == varToGetClassType.getClass())
+         * editor.putStringSet(null, null);
+         */
+        else
+            isValidType = false;
 
-		if (!isValidType)
-			return ReturnCodes.FAILED;
+        if (!isValidType)
+            return ReturnCodes.FAILED;
 
-		return ReturnCodes.OK;
-	}
+        return ReturnCodes.OK;
+    }
 }

@@ -34,20 +34,20 @@ import android.app.ActivityManager;
 import android.content.Context;
 
 public class Service {
-	public static boolean isRunning(Context context, String serviceName) {
-		ActivityManager activityManager = (ActivityManager) context
-				.getSystemService(Context.ACTIVITY_SERVICE);
-		List<ActivityManager.RunningServiceInfo> serviceList = activityManager
-				.getRunningServices(500);
+    public static boolean isRunning(Context context, String serviceName) {
+        ActivityManager activityManager = (ActivityManager) context
+                .getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningServiceInfo> serviceList = activityManager
+                .getRunningServices(500);
 
-		if (serviceList.size() <= 0)
-			return false;
+        if (serviceList.size() <= 0)
+            return false;
 
-		for (int i = 0; i < serviceList.size(); ++i) {
-			if (serviceList.get(i).service.getClassName().equals(serviceName))
-				return true;
-		}
+        for (int i = 0; i < serviceList.size(); ++i) {
+            if (serviceList.get(i).service.getClassName().equals(serviceName))
+                return true;
+        }
 
-		return false;
-	}
+        return false;
+    }
 }
