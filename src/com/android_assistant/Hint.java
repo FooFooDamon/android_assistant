@@ -48,6 +48,16 @@ public class Hint {
             context.getResources().getString(contentsResId));
     }
 
+    public static void alert(Context context, int titleResId, CharSequence contents) {
+        alert(context, context.getResources().getString(titleResId),
+        	contents);
+    }
+
+    public static void alert(Context context, CharSequence title, int contentsResId) {
+        alert(context, title,
+            context.getResources().getString(contentsResId));
+    }
+
     public static void alert(Context context, CharSequence title, CharSequence contents,
         OnClickListener positiveListener) {
         new AlertDialog.Builder(context)
@@ -61,6 +71,18 @@ public class Hint {
     public static void alert(Context context, int titleResId, int contentsResId,
         OnClickListener positiveListener) {
         alert(context, context.getResources().getString(titleResId),
+            context.getResources().getString(contentsResId), positiveListener);
+    }
+
+    public static void alert(Context context, int titleResId, CharSequence contents,
+        OnClickListener positiveListener) {
+        alert(context, context.getResources().getString(titleResId),
+        	contents, positiveListener);
+    }
+
+    public static void alert(Context context, CharSequence title, int contentsResId,
+        OnClickListener positiveListener) {
+        alert(context, title,
             context.getResources().getString(contentsResId), positiveListener);
     }
 
@@ -78,6 +100,18 @@ public class Hint {
     public static void alert(Context context, int titleResId, int contentsResId,
         OnClickListener positiveListener, OnClickListener negativeListener) {
         alert(context, context.getResources().getString(titleResId),
+            context.getResources().getString(contentsResId), positiveListener, negativeListener);
+    }
+
+    public static void alert(Context context, int titleResId, CharSequence contents,
+        OnClickListener positiveListener, OnClickListener negativeListener) {
+        alert(context, context.getResources().getString(titleResId),
+        	contents, positiveListener, negativeListener);
+    }
+
+    public static void alert(Context context, CharSequence title, int contentsResId,
+        OnClickListener positiveListener, OnClickListener negativeListener) {
+        alert(context, title,
             context.getResources().getString(contentsResId), positiveListener, negativeListener);
     }
 
