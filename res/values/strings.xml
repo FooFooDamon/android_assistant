@@ -83,6 +83,10 @@
     <string name="cht_copyright">版權</string>
     <string name="en_copyright">Copyright</string>
 
+    <string name="version">版本</string>
+    <string name="cht_version">版本</string>
+    <string name="en_version">Version</string>
+
     <string name="version_log">版本日志</string>
     <string name="cht_version_log">版本日志</string>
     <string name="en_version_log">Version Log</string>
@@ -119,6 +123,10 @@
     <string name="cht_remarks">備注</string>
     <string name="en_remarks">Remarks</string>
 
+    <string name="refer_to_remarks">见备注</string>
+    <string name="cht_refer_to_remarks">見備注</string>
+    <string name="en_refer_to_remarks">Refer to Remarks</string>
+
     <string name="save">保存</string>
     <string name="cht_save">保存</string>
     <string name="en_save">Save</string>
@@ -130,6 +138,10 @@
     <string name="save_failed">保存失败</string>
     <string name="cht_save_failed">保存失敗</string>
     <string name="en_save_failed">Saved Unsuccessfully</string>
+
+    <string name="refresh">刷新</string>
+    <string name="cht_refresh">刷新</string>
+    <string name="en_refresh">Refresh</string>
 
     <string name="yes">是</string>
     <string name="cht_yes">是</string>
@@ -222,6 +234,10 @@
     <string name="add">添加</string>
     <string name="cht_add">添加</string>
     <string name="en_add">Add</string>
+
+    <string name="add_new">新增</string>
+    <string name="cht_add_new">新增</string>
+    <string name="en_add_new">New</string>
 
     <string name="delete">删除</string>
     <string name="cht_delete">刪除</string>
@@ -338,6 +354,10 @@
     <string name="db_error">数据库操作错误</string>
     <string name="cht_db_error">數據庫操作錯誤</string>
     <string name="en_db_error">Database Error</string>
+
+    <string name="data_init_error">数据初始化失败</string>
+    <string name="cht_data_init_error">數據初始化失敗</string>
+    <string name="en_data_init_error">Data Initialization Error</string>
 
     <!--
          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

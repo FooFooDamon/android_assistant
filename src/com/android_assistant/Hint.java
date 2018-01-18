@@ -50,7 +50,7 @@ public class Hint {
 
     public static void alert(Context context, int titleResId, CharSequence contents) {
         alert(context, context.getResources().getString(titleResId),
-        	contents);
+            contents);
     }
 
     public static void alert(Context context, CharSequence title, int contentsResId) {
@@ -77,7 +77,7 @@ public class Hint {
     public static void alert(Context context, int titleResId, CharSequence contents,
         OnClickListener positiveListener) {
         alert(context, context.getResources().getString(titleResId),
-        	contents, positiveListener);
+            contents, positiveListener);
     }
 
     public static void alert(Context context, CharSequence title, int contentsResId,
@@ -106,7 +106,7 @@ public class Hint {
     public static void alert(Context context, int titleResId, CharSequence contents,
         OnClickListener positiveListener, OnClickListener negativeListener) {
         alert(context, context.getResources().getString(titleResId),
-        	contents, positiveListener, negativeListener);
+            contents, positiveListener, negativeListener);
     }
 
     public static void alert(Context context, CharSequence title, int contentsResId,

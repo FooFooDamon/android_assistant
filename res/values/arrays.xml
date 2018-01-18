@@ -110,6 +110,12 @@
         <item>@string/en_copyright</item>
     </string-array>
 
+    <string-array name="version">
+        <item>@string/version</item>
+        <item>@string/cht_version</item>
+        <item>@string/en_version</item>
+    </string-array>
+
     <string-array name="version_log">
         <item>@string/version_log</item>
         <item>@string/cht_version_log</item>
@@ -164,6 +170,12 @@
         <item>@string/en_remarks</item>
     </string-array>
 
+    <string-array name="refer_to_remarks">
+        <item>@string/refer_to_remarks</item>
+        <item>@string/cht_refer_to_remarks</item>
+        <item>@string/en_refer_to_remarks</item>
+    </string-array>
+
     <string-array name="save">
         <item>@string/save</item>
         <item>@string/cht_save</item>
@@ -180,6 +192,12 @@
         <item>@string/save_failed</item>
         <item>@string/cht_save_failed</item>
         <item>@string/en_save_failed</item>
+    </string-array>
+
+    <string-array name="refresh">
+        <item>@string/refresh</item>
+        <item>@string/cht_refresh</item>
+        <item>@string/en_refresh</item>
     </string-array>
 
     <string-array name="yes">
@@ -318,6 +336,12 @@
         <item>@string/add</item>
         <item>@string/cht_add</item>
         <item>@string/en_add</item>
+    </string-array>
+
+    <string-array name="add_new">
+        <item>@string/add_new</item>
+        <item>@string/cht_add_new</item>
+        <item>@string/en_add_new</item>
     </string-array>
 
     <string-array name="delete">
@@ -492,6 +516,12 @@
         <item>@string/db_error</item>
         <item>@string/cht_db_error</item>
         <item>@string/en_db_error</item>
+    </string-array>
+
+    <string-array name="data_init_error">
+        <item>@string/data_init_error</item>
+        <item>@string/cht_data_init_error</item>
+        <item>@string/en_data_init_error</item>
     </string-array>
 
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
