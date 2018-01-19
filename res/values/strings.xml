@@ -143,6 +143,14 @@
     <string name="cht_refresh">刷新</string>
     <string name="en_refresh">Refresh</string>
 
+    <string name="please">请</string>
+    <string name="cht_please">請</string>
+    <string name="en_please">Please</string>
+
+    <string name="please_wait">请稍候</string>
+    <string name="cht_please_wait">請稍候</string>
+    <string name="en_please_wait">Please Wait</string>
+
     <string name="yes">是</string>
     <string name="cht_yes">是</string>
     <string name="en_yes">Yes</string>
@@ -191,6 +199,10 @@
     <string name="cht_query">查詢</string>
     <string name="en_query">Query</string>
 
+    <string name="querying">查询中……</string>
+    <string name="cht_querying">查詢中……</string>
+    <string name="en_querying">Querying\.\.\.</string>
+
     <string name="query_result">查询结果</string>
     <string name="cht_query_result">查詢結果</string>
     <string name="en_query_result">Query Result</string>
@@ -198,6 +210,14 @@
     <string name="search">查找</string>
     <string name="cht_search">查找</string>
     <string name="en_search">Search</string>
+
+    <string name="searching">查找中……</string>
+    <string name="cht_searching">查找中……</string>
+    <string name="en_searching">Searching\.\.\.</string>
+
+    <string name="search_manually">手动查找</string>
+    <string name="cht_search_manually">手動查找</string>
+    <string name="en_search_manually">Search Manually</string>
 
     <string name="search_result">查找结果</string>
     <string name="cht_search_result">查找結果</string>
@@ -214,6 +234,18 @@
     <string name="none">无</string>
     <string name="cht_none">無</string>
     <string name="en_none">None</string>
+
+    <string name="multi_records_found">找到多条记录</string>
+    <string name="cht_multi_records_found">找到多條記錄</string>
+    <string name="en_multi_records_found">Multiple Records Found</string>
+
+    <string name="redirect">跳转/重定向</string>
+    <string name="cht_redirect">跳轉/重定向</string>
+    <string name="en_redirect">Redirect</string>
+
+    <string name="redirecting">跳转/重定向中……</string>
+    <string name="cht_redirecting">跳轉/重定向中……</string>
+    <string name="en_redirecting">Redirecting\.\.\.</string>
 
     <string name="unknown">未知</string>
     <string name="cht_unknown">未知</string>
