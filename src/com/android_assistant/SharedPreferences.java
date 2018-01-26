@@ -32,27 +32,27 @@ import android.content.Context;
 import android.preference.PreferenceManager;
 
 public class SharedPreferences {
-    private enum ValueTypeEnum {
+    public static enum ValueTypeEnum {
         BOOL, INT, LONG, FLOAT, STRING, STRING_SET
     };
 
     public static Object getValue(Context context, String key,
-            ValueTypeEnum valueType) {
+            ValueTypeEnum valueType, Object defaultValue) {
 
         android.content.SharedPreferences pref = PreferenceManager
                 .getDefaultSharedPreferences(context);
 
         // TODO: Is try{}catch(){} necessary??
         if (ValueTypeEnum.BOOL == valueType)
-            return pref.getBoolean(key, false);
+            return pref.getBoolean(key, (boolean)defaultValue);
         else if (ValueTypeEnum.INT == valueType)
-            return pref.getInt(key, 0);
+            return pref.getInt(key, (int)defaultValue);
         else if (ValueTypeEnum.LONG == valueType)
-            return pref.getLong(key, 0);
+            return pref.getLong(key, (long)defaultValue);
         else if (ValueTypeEnum.FLOAT == valueType)
-            return pref.getFloat(key, 0F);
+            return pref.getFloat(key, (float)defaultValue);
         else if (ValueTypeEnum.STRING == valueType)
-            return pref.getString(key, null);
+            return pref.getString(key, (String)defaultValue);
         // TODO: finish it later
         /*
          * else if (ValueTypeEnum.STRING_SET == valueType)

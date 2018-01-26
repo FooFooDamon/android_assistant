@@ -195,6 +195,18 @@
     <string name="cht_undo">撤銷</string>
     <string name="en_undo">Undo</string>
 
+    <string name="continue_to">继续</string>
+    <string name="cht_continue_to">繼續</string>
+    <string name="en_continue_to">Continue</string>
+
+    <string name="abort">中止</string>
+    <string name="cht_abort">中止</string>
+    <string name="en_abort">Abort</string>
+
+    <string name="stop">停止</string>
+    <string name="cht_stop">停止</string>
+    <string name="en_stop">Stop</string>
+
     <string name="query">查询</string>
     <string name="cht_query">查詢</string>
     <string name="en_query">Query</string>
@@ -370,6 +382,22 @@
     <string name="black_list_first">黑名单优先</string>
     <string name="cht_black_list_first">黑名單優先</string>
     <string name="en_black_list_first">Black List First</string>
+
+    <string name="single_line_mode">单行模式</string>
+    <string name="cht_single_line_mode">單行模式</string>
+    <string name="en_single_line_mode">Single-line Mode</string>
+
+    <string name="switch_to_single_line_mode">切换到单行模式</string>
+    <string name="cht_switch_to_single_line_mode">切換到單行模式</string>
+    <string name="en_switch_to_single_line_mode">Switch to Single-line Mode</string>
+
+    <string name="multi_line_mode">多行模式</string>
+    <string name="cht_multi_line_mode">多行模式</string>
+    <string name="en_multi_line_mode">Multi-line Mode</string>
+
+    <string name="switch_to_multi_line_mode">切换到多行模式</string>
+    <string name="cht_switch_to_multi_line_mode">切換到多行模式</string>
+    <string name="en_switch_to_multi_line_mode">Switch to Multi-line Mode</string>
 
     <string name="config_details">配置详情</string>
     <string name="cht_config_details">配置詳情</string>
