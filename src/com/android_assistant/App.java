@@ -239,6 +239,12 @@ public class App {
         notificationManager.cancel(0);
     }
 
+    // NOTE: This method has to be executed before setContentView() within onCreate()!
+    public static void allowHomeKeyListening(Activity activity) {
+        // TODO: What do these two numbers mean respectively?;
+        activity.getWindow().setFlags(0x80000000, 0x80000000);
+    }
+
     private static PackageInfo getPackageInfo(Context ctx) {
         PackageInfo packageInfo = null;
 

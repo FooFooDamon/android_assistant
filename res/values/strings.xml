@@ -44,6 +44,22 @@
     <string name="cht_ellipsis">……</string>
     <string name="en_ellipsis">&#8230;</string>
 
+    <string name="less_than">&lt;</string>
+    <string name="cht_less_than">&lt;</string>
+    <string name="en_less_than">&lt;</string>
+
+    <string name="prev_arrow">&#160;&lt;&#160;</string>
+    <string name="cht_prev_arrow">&#160;&lt;&#160;</string>
+    <string name="en_prev_arrow">&#160;&lt;&#160;</string>
+
+    <string name="greater_than">&gt;</string>
+    <string name="cht_greater_than">&gt;</string>
+    <string name="en_greater_than">&gt;</string>
+
+    <string name="next_arrow">&#160;&gt;&#160;</string>
+    <string name="cht_next_arrow">&#160;&gt;&#160;</string>
+    <string name="en_next_arrow">&#160;&gt;&#160;</string>
+
 
 
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -57,7 +73,7 @@
     <string name="en_hello_world">Hello world!</string>
 
     <string name="empty_string"></string>
-    <string name="space"> </string>
+    <string name="space">&#160;</string>
 
     <string name="settings">设置</string>
     <string name="cht_settings">設置</string>
@@ -211,6 +227,10 @@
     <string name="cht_query">查詢</string>
     <string name="en_query">Query</string>
 
+    <string name="conditions_insufficient_or_wrong">条件不足或错误</string>
+    <string name="cht_conditions_insufficient_or_wrong">條件不足或錯誤</string>
+    <string name="en_conditions_insufficient_or_wrong">Conditions Insufficient or Wrong</string>
+
     <string name="querying">查询中……</string>
     <string name="cht_querying">查詢中……</string>
     <string name="en_querying">Querying\.\.\.</string>
@@ -258,6 +278,14 @@
     <string name="redirecting">跳转/重定向中……</string>
     <string name="cht_redirecting">跳轉/重定向中……</string>
     <string name="en_redirecting">Redirecting\.\.\.</string>
+
+    <string name="prev_one">前一个</string>
+    <string name="cht_prev_one">前一個</string>
+    <string name="en_prev_one">Previous</string>
+
+    <string name="next_one">后一个</string>
+    <string name="cht_next_one">後一個</string>
+    <string name="en_next_one">Next</string>
 
     <string name="unknown">未知</string>
     <string name="cht_unknown">未知</string>

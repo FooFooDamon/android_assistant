@@ -60,6 +60,30 @@
         <item>@string/en_ellipsis</item>
     </string-array>
 
+    <string-array name="less_than">
+        <item>@string/less_than</item>
+        <item>@string/cht_less_than</item>
+        <item>@string/en_less_than</item>
+    </string-array>
+
+    <string-array name="prev_arrow">
+        <item>@string/prev_arrow</item>
+        <item>@string/cht_prev_arrow</item>
+        <item>@string/en_prev_arrow</item>
+    </string-array>
+
+    <string-array name="greater_than">
+        <item>@string/greater_than</item>
+        <item>@string/cht_greater_than</item>
+        <item>@string/en_greater_than</item>
+    </string-array>
+
+    <string-array name="next_arrow">
+        <item>@string/next_arrow</item>
+        <item>@string/cht_next_arrow</item>
+        <item>@string/en_next_arrow</item>
+    </string-array>
+
 
 
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -302,6 +326,12 @@
         <item>@string/en_query</item>
     </string-array>
 
+    <string-array name="conditions_insufficient_or_wrong">
+        <item>@string/conditions_insufficient_or_wrong</item>
+        <item>@string/cht_conditions_insufficient_or_wrong</item>
+        <item>@string/en_conditions_insufficient_or_wrong</item>
+    </string-array>
+
     <string-array name="querying">
         <item>@string/querying</item>
         <item>@string/cht_querying</item>
@@ -372,6 +402,18 @@
         <item>@string/redirecting</item>
         <item>@string/cht_redirecting</item>
         <item>@string/en_redirecting</item>
+    </string-array>
+
+    <string-array name="prev_one">
+        <item>@string/prev_one</item>
+        <item>@string/cht_prev_one</item>
+        <item>@string/en_prev_one</item>
+    </string-array>
+
+    <string-array name="next_one">
+        <item>@string/next_one</item>
+        <item>@string/cht_next_one</item>
+        <item>@string/en_next_one</item>
     </string-array>
 
     <string-array name="unknown">
